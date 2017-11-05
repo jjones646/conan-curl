@@ -1,6 +1,5 @@
-PROJECT(conanzlib)
-cmake_minimum_required(VERSION 2.8)
-include(conanbuildinfo.cmake)
-
-CONAN_BASIC_SETUP()
-add_subdirectory("./zlib-1.2.8")
+project( CurlConan )
+cmake_minimum_required( VERSION 2.8 )
+include( conanbuildinfo.cmake )
+conan_basic_setup( TARGETS )
+add_subdirectory( curl )

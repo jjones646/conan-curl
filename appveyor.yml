@@ -3,17 +3,15 @@ environment:
     PYTHON: "C:\\Python27"
     PYTHON_VERSION: "2.7.8"
     PYTHON_ARCH: "32"
-    
-    CONAN_UPLOAD: 1
-    CONAN_REFERENCE: "libcurl/7.50.3"
-    CONAN_USERNAME: "lasote"
-    CONAN_CHANNEL: "testing"
+
+    CONAN_REFERENCE: "curl/7.56.1"
+    CONAN_USERNAME: "jjones646"
+    CONAN_CHANNEL: "stable"
     CONAN_TOTAL_PAGES: 6
-    CONAN_STABLE_BRANCH_PATTERN: "release/*"
-    
+
     matrix:
         - CONAN_CURRENT_PAGE: 1
-        - CONAN_CURRENT_PAGE: 2  
+        - CONAN_CURRENT_PAGE: 2
         - CONAN_CURRENT_PAGE: 3
         - CONAN_CURRENT_PAGE: 4
         - CONAN_CURRENT_PAGE: 5

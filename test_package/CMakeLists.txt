@@ -1,8 +1,11 @@
-PROJECT(MyHello)
-cmake_minimum_required(VERSION 3.0)
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-CONAN_BASIC_SETUP()
+project( CurlConanPackageTest )
+cmake_minimum_required( VERSION  3.0 )
+include( "${CMAKE_BINARY_DIR}/conanbuildinfo.cmake" )
+conan_basic_setup( TARGETS )
 
-ADD_EXECUTABLE(main main.c)
-MESSAGE(${CONAN_LIBS})
-TARGET_LINK_LIBRARIES(main ${CONAN_LIBS})
+add_executable( CurlPackageTest
+    main.c
+)
+target_link_libraries( CurlPackageTest
+    PRIVATE  CONAN_PKG::curl
+)

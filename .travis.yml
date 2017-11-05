@@ -5,13 +5,11 @@ sudo: required
 language: python
 env:
   global:
-    - CONAN_UPLOAD=1
-    - CONAN_REFERENCE="libcurl/7.50.3"
-    - CONAN_USERNAME="lasote"
-    - CONAN_CHANNEL="testing"
+    - CONAN_REFERENCE="curl/7.56.1"
+    - CONAN_USERNAME="jjones646"
+    - CONAN_CHANNEL="stable"
     - CONAN_TOTAL_PAGES=1
     - CONAN_CURRENT_PAGE=1
-    - CONAN_STABLE_BRANCH_PATTERN="release/*"
 
   matrix:
     - CONAN_GCC_VERSIONS=4.6 CONAN_USE_DOCKER=1
@@ -25,7 +23,7 @@ env:
 
 matrix:
    include:
-       - os: osx 
+       - os: osx
          osx_image: xcode8.2 # apple-clang 8.2
          language: generic
          env: CONAN_CURRENT_PAGE=1
@@ -34,7 +32,7 @@ matrix:
          language: generic
          env: CONAN_CURRENT_PAGE=2
 
-       - os: osx 
+       - os: osx
          osx_image: xcode7.3 # apple-clang 7.3
          language: generic
          env: CONAN_CURRENT_PAGE=1
